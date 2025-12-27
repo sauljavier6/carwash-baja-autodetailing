@@ -1,0 +1,128 @@
+.container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/Carrusel4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--buttons-hover);
+    background-blend-mode: overlay;
+    padding: 1rem;
+    
+    &__content{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-secondary-black);
+        gap: 1rem;
+
+        &__box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          
+
+            &__box_content {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+               
+                h1 {
+                    font-size: 10rem;
+                    color: var(--background-light);
+                    position: relative;
+                    z-index: 2;
+                    margin-right: -2rem;
+                }
+                    
+                img {
+                    position: relative;
+                    z-index: 2;
+                    width: 80%;
+                    height: 30vh;
+                    margin-left: -1rem;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+  }
+  
+  /* Pantallas pequeñas (hasta 768px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0.5rem;
+        
+        &__content{
+            padding: 0;
+            gap: 1rem;
+    
+            &__box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__box_content {
+                    h1 {
+                        color: var(--background-light);
+                        position: relative;
+                        z-index: 2;
+                        margin-right: 0;
+                    }
+                        
+                    img {
+                        position: relative;
+                        z-index: 2;
+                        width: 50vh;
+                        height: 30vh;
+                        margin-left: 0;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+      }
+  }
+  
+  /* Pantallas muy pequeñas (hasta 480px) */
+  @media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+        
+        &__content{
+            padding: 0;
+            gap: 1rem;
+    
+            &__box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__box_content {
+                    h1 {
+                        font-size: 5rem;
+                        color: var(--background-light);
+                        position: relative;
+                        z-index: 2;
+                        margin-right: 0;
+                    }
+                        
+                    img {
+                        position: relative;
+                        z-index: 2;
+                        width: 40vh;
+                        height: 30vh;
+                        margin-left: 0;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+      }
+  }

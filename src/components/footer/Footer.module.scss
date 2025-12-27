@@ -1,0 +1,43 @@
+.footer {
+    height: auto;
+    background-color: var(--footer);
+    color: var(--text-secondary-black);
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {       
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        }
+
+        
+        &__icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            img {
+              width: 24px;
+              height: 24px;
+              margin-right: 8px;
+            }
+        }
+    }
+
+  }
+  

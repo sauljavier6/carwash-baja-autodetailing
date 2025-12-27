@@ -1,0 +1,121 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  &__content_desc {
+
+  }
+  
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    transition: transform 1s ease-in-out;
+
+    &__mini_card {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        transition: transform 1s ease-in-out;
+
+        &:active {
+          cursor: grabbing;
+        }
+        
+        img {
+          width: 45vh; // Se ajusta al ancho del contenedor
+          height: 50vh; // Todas tienen la misma altura
+          object-fit: cover; // Mantiene la proporción y recorta si es necesario
+          border-radius: 10px;
+        }
+    }
+  }
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  
+    &__content_desc {
+      button {
+        display: none;
+      }
+    }
+    
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // 2 columnas
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden; // Quita el scroll horizontal
+      position: relative;
+    
+      &__mini_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        
+        img {
+          width: 100%;
+          height: 50vh;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }    
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  
+    &__content_desc {
+      button {
+        display: none;
+      }
+    }
+    
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); // 2 columnas
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden; // Quita el scroll horizontal
+      position: relative;
+    
+      &__mini_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+          width: 100%;
+          height: 50vh;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }    
+  }
+}

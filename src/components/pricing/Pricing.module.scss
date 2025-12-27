@@ -1,0 +1,192 @@
+.container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    &__content_desc {
+        width: 30%;
+        padding: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+
+        h1 {
+            align-self: flex-start;
+            border-left: 4px solid blue;
+            padding-left: 0.5rem;
+        }
+    }
+    
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        overflow-x: auto; // Habilita el scroll horizontal
+        scroll-snap-type: x mandatory; // Ajusta el desplazamiento fluido
+        -webkit-overflow-scrolling: touch; // Mejora en móviles
+
+        &__mini_card {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            width: 30vh;
+            height: 30vh;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            border: 2px solid var(--background-light);
+            font-weight: bold;
+
+            h1 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.9rem;
+                text-align: justify;
+            }
+            
+            button {
+                width: 50%;
+                height: 50px;
+                background-color: #ffffff;
+                border-radius: 2rem;
+                border: 1px  solid blue;
+            }
+      
+            button:hover {
+                background-color: var(--background-light);
+            }
+        }
+    }
+  }
+  
+  /* Pantallas pequeñas (hasta 768px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin-top: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    
+        &__content_desc {
+            order: 1;
+            width: 90%;
+            padding: 1rem;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+        }
+        
+        &__content{
+            order: 2;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            overflow-x: auto; // Habilita el scroll horizontal
+            scroll-snap-type: x mandatory; // Ajusta el desplazamiento fluido
+            -webkit-overflow-scrolling: touch; // Mejora en móviles
+    
+            &__mini_card {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+                width: 100%;
+                height: 30vh;
+                background-color: #f0f0f0;
+                border-radius: 8px;
+                border: 2px solid var(--background-light);
+                font-weight: bold;
+    
+                h1 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+  }
+  
+  /* Pantallas muy pequeñas (hasta 480px) */
+  @media (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    
+        &__content_desc {
+            order: 1;
+            width: 90%;
+            padding: 1rem;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+        }
+        
+        &__content{
+            order: 2;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            overflow-x: auto; // Habilita el scroll horizontal
+            scroll-snap-type: x mandatory; // Ajusta el desplazamiento fluido
+            -webkit-overflow-scrolling: touch; // Mejora en móviles
+    
+            &__mini_card {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+                width: 100%;
+                height: 30vh;
+                background-color: #f0f0f0;
+                border-radius: 8px;
+                border: 2px solid var(--background-light);
+                font-weight: bold;
+    
+                h1 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+  }
